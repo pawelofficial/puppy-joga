@@ -74,6 +74,7 @@ body {
 }
 .custom-paragraph-1 {
     display: block;
+    margin: 50px auto;
     max-width: 90%;        /* Reduce max-width for smaller screens */
     font-size: 1.5rem;     /* Decrease font size */
     color: #F2E5D2;
