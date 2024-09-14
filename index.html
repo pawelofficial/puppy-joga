@@ -42,26 +42,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>10:00 AM - 11:00 AM</td>
-                        <td>Puppy Yoga - Beginners</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>6:00 PM - 7:00 PM</td>
-                        <td>Puppy Yoga - Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>5:00 PM - 6:00 PM</td>
-                        <td>Puppy Yoga - Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>9:00 AM - 10:00 AM</td>
-                        <td>Puppy Yoga - All Levels</td>
-                    </tr>
+                    <!-- Table body will be populated by JavaScript -->
                 </tbody>
             </table>
         </div>
@@ -74,15 +55,36 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <!-- Include Papa Parse library -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
-    <!-- Initialize DataTables -->
-    <script>
-        $(document).ready(function() {
-            $('#schedule-table').DataTable({
-                paging: false,   // Disable pagination
-                searching: false, // Disable search feature
-                info: false       // Disable table information
-            });
+<!-- Initialize DataTable with CSV data -->
+<script>
+    $(document).ready(function() {
+        Papa.parse('schedule.csv', {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                // Destroy existing DataTable instance if it exists
+                if ($.fn.DataTable.isDataTable('#schedule-table')) {
+                    $('#schedule-table').DataTable().clear().destroy();
+                }
+    
+                // Initialize DataTable
+                $('#schedule-table').DataTable({
+                    data: results.data,
+                    columns: [
+                        { data: 'Day' },
+                        { data: 'Time' },
+                        { data: 'Class' }
+                    ],
+                    paging: false,
+                    searching: false,
+                    info: false
+                });
+            }
         });
+    });
     </script>
+
+    <!-- Initialize DataTables -->
 </body>
 </html>
