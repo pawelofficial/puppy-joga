@@ -12,63 +12,62 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
-<div class="background-container">
-    <img src="images/logo.jpg" alt="Background" class="background-image">
-    <div class="circle-container">
-        <div class="circle">
-            <img src="images/image1.jpg" alt="Image 1">
+<body>
+    <div class="background-container">
+        <img src="images/logo.jpg" alt="Background" class="background-image">
+        <p class="custom-paragraph-1">
+            🐶 Najsłodsza joga  w Twoim mieście 🐶
+        </p>
+        <div class="circle-container">
+            <div class="circle">
+                <img src="images/image3.png" alt="Image 1">
+            </div>
+            <div class="circle middle">
+                <img src="images/image1.jpg" alt="Image 2">
+            </div>
+            <div class="circle">
+                <img src="images/image2.jpg" alt="Image 3">
+            </div>
         </div>
-        <div class="circle middle">
-            <img src="images/image2.jpg" alt="Image 2">
-        </div>
-        <div class="circle">
-            <img src="images/image3.png" alt="Image 3">
-        </div>
+        <p class="custom-paragraph">
+            Zapisy przez Instagram 
+            <a href="https://www.instagram.com/puppy_joga" target="_blank">@puppy_joga</a>
+        </p>
+    </div> <!-- background-container end -->
+
+    <div class="city-filter form-group">
+        <label for="city-select">:</label>
+        <select id="city-select" class="form-control w-auto">
+            <option value="All">All Cities</option>
+            <!-- Options will be populated dynamically -->
+        </select>
     </div>
-    <p class="custom-paragraph">
-        Zapisy na jogę 🐶 przez Instagram 
-        <a href="https://www.instagram.com/puppy_joga" target="_blank">@puppy_joga</a>
-    </p>
-</div> <!-- background container end -->
 
-<div class="city-filter form-group">
-    <select id="city-select" class="form-control w-auto">
-        <option value="All">All Cities</option>
-        <!-- Options will be populated dynamically -->
-    </select>
-    <label for="city-select" ></label>
-</div>
+    <!-- Class schedule below the images -->
+    <div class="class-schedule">
+        <h2> 🧘 Grafik 🧘 </h2>
+        <table id="schedule-table" class="display table table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Class</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table body will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
 
-        <!-- Class schedule below the images -->
-        <div class="class-schedule">
-            <h2> 🧘 Grafik 🧘 </h2>
-            <table id="schedule-table" class="display">
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Time</th>
-                        <th>Class</th>
-                        <th>City</th> <!-- Add this line -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table body will be populated by JavaScript -->
-                </tbody>
-            </table>
-        </div>
-    </div> <!-- background container end -->
-
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-
     <!-- Papa Parse library -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
-
     <!-- Your custom script file -->
     <script src="js/parse_csv.js"></script>
-
-    <!-- Initialize DataTables -->
 </body>
 </html>
