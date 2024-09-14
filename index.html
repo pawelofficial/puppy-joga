@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>Circle Images with Background</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-
-    <main>
-        <p>This is the homepage of my simple website.</p>
-        <img src="images/puppy1.jpg" alt="A beautiful landscape">
-        <img src="images/puppy2.jpg" alt="A beautiful landscape">
-        <img src="images/puppy3.jpg" alt="A beautiful landscape">
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+    <div class="background-container">
+        <img src="images/logo.jpg" alt="Background" class="background-image">
+        <div class="circle-container">
+            <div class="circle">
+                <img src="images/image1.jpg" alt="Image 2">
+            </div>
+            <div class="circle middle"> <!-- Middle circle is larger -->
+                <img src="images/image2.jpg" alt="Image 3">
+            </div>
+            <div class="circle">
+                <img src="images/image3.png" alt="Image 4">
+            </div>
+        </div>
+        <p class="custom-paragraph">
+            Zapisy na jogę 🐶 przez instagram 
+            <a href="https://www.instagram.com/puppy_joga" target="_blank">@puppy_joga</a>
+        </p>
+    </div>
 </body>
 </html>

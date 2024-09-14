@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(5px); /* Optional: Adds a blur to the background */
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    transform: translateY(100px); /* Move the circles down vertically */
+}
+
+.circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle.middle {
+    width: 500px; /* Increase the size of the middle circle */
+    height: 500px;
+}
+
+.custom-paragraph {
+    position: absolute;
+    bottom: 30px; /* Move the paragraph lower */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 2rem; /* Make the text larger */
+    font-family: 'Arial', sans-serif; /* Change font family to make it look nicer */
+    color: #d4af37; /* Dark yellow color for the paragraph text */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    padding: 10px 20px; /* Add padding around the text */
+    border-radius: 10px; /* Add rounded corners to the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add some shadow for a 3D effect */
+}
+
+.custom-paragraph a {
+    color: #d4af37; /* Dark yellow color for the link by default */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link text bold */
+}
+
+.custom-paragraph a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #ff0000; /* Red color on hover */
+}
