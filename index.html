@@ -10,6 +10,7 @@
 
     <!-- Your custom styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <div class="background-container">
     <img src="images/logo.jpg" alt="Background" class="background-image">
@@ -30,15 +31,24 @@
     </p>
 </div> <!-- background container end -->
 
+<div class="city-filter form-group">
+    <select id="city-select" class="form-control w-auto">
+        <option value="All">All Cities</option>
+        <!-- Options will be populated dynamically -->
+    </select>
+    <label for="city-select" ></label>
+</div>
+
         <!-- Class schedule below the images -->
         <div class="class-schedule">
-            <h2> Zajęcia 🧘 </h2>
+            <h2> 🧘 Grafik 🧘 </h2>
             <table id="schedule-table" class="display">
                 <thead>
                     <tr>
                         <th>Day</th>
                         <th>Time</th>
                         <th>Class</th>
+                        <th>City</th> <!-- Add this line -->
                     </tr>
                 </thead>
                 <tbody>
@@ -48,42 +58,16 @@
         </div>
     </div> <!-- background container end -->
 
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- DataTables JS -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-    <!-- Include Papa Parse library -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+    <!-- Papa Parse library -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
-<!-- Initialize DataTable with CSV data -->
-<script>
-    $(document).ready(function() {
-        Papa.parse('schedule.csv', {
-            download: true,
-            header: true,
-            skipEmptyLines: true,
-            complete: function(results) {
-                // Destroy existing DataTable instance if it exists
-                if ($.fn.DataTable.isDataTable('#schedule-table')) {
-                    $('#schedule-table').DataTable().clear().destroy();
-                }
-    
-                // Initialize DataTable
-                $('#schedule-table').DataTable({
-                    data: results.data,
-                    columns: [
-                        { data: 'Day' },
-                        { data: 'Time' },
-                        { data: 'Class' }
-                    ],
-                    paging: false,
-                    searching: false,
-                    info: false
-                });
-            }
-        });
-    });
-    </script>
+
+    <!-- Your custom script file -->
+    <script src="js/parse_csv.js"></script>
 
     <!-- Initialize DataTables -->
 </body>

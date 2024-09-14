@@ -132,3 +132,32 @@ td {
 tr td:nth-child(1) {
     background-color: red; /* Change this to your desired color */
 }
+
+
+/* Add to your CSS file */
+.city-filter {
+    display: inline-flex;          /* Changes the display type to inline-flex */
+    align-items: center;           /* Centers items vertically */
+    justify-content: center;       /* Centers items horizontally */
+    max-width: 500px;              /* Sets a maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   /* Subtle shadow */
+    padding: 10px;                 /* Space inside the container */
+    border-radius: 4px;            /* Rounded corners */
+    margin: 20px auto;             /* Centers the container horizontally */
+}
+
+.city-filter label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #d4af37;
+}
+
+#city-select {
+    font-size: 16px;    /* Increase dropdown font size */
+    width: auto;        /* Adjust the width to fit the content */
+    margin-right: 10px;
+    color:black;  
+}
+

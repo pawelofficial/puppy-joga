@@ -1,5 +1,6 @@
-Day,Time,Class
-Monday,10:00 AM - 11:00 AM,Puppy Yoga - Beginners
-Wednesday,6:00 PM - 7:00 PM,Puppy Yoga - Intermediate
-Friday,5:00 PM - 6:00 PM,Puppy Yoga - Advanced
-Saturday,9:00 AM - 10:00 AM,Puppy Yoga - All Levels
+Day,Time,Class,City
+Monday,10:00 AM - 11:00 AM,Puppy Yoga - Beginners,New York
+Wednesday,6:00 PM - 7:00 PM,Puppy Yoga - Intermediate,Los Angeles
+Friday,5:00 PM - 6:00 PM,Puppy Yoga - Advanced,Chicago
+Saturday,9:00 AM - 10:00 AM,Puppy Yoga - All Levels,New York
+Sunday,11:00 AM - 12:00 PM,Puppy Yoga - All Levels,Los Angeles
