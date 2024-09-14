@@ -37,8 +37,7 @@ $(document).ready(function() {
             var dataTable = $('#schedule-table').DataTable({
                 data: data,
                 columns: [
-                    { data: 'Day' },
-                    { data: 'Time' },
+                    { data: 'Date' },
                     { data: 'Class' },
                     { data: 'City' }
                 ],
