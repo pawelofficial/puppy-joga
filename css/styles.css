@@ -72,6 +72,17 @@ body {
     height: 100%;
     object-fit: cover;
 }
+.custom-paragraph-1 {
+    display: block;
+    max-width: 90%;        /* Reduce max-width for smaller screens */
+    font-size: 1.5rem;     /* Decrease font size */
+    color: #F2E5D2;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
 
 /* Adjusted custom-paragraph */
 .custom-paragraph {
@@ -116,9 +127,9 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px auto; /* Center the table */
-    border: 2px solid #F2E5D2; /* Slightly thicker table border */
-    box-shadow: 0px 0px 50px white;
+    margin: 30px auto; /* Center the table */
+    border: 2px solid  #F2E5D2;; /* Slightly thicker table border */
+    box-shadow: 0px 0px 50px black;
     
 }
 
@@ -130,7 +141,7 @@ th, td {
 
 th {
     background-color: #D15C65;  /* Header background color */
-    color: white;               /* Header text color */
+    color:  #F2E5D2;               /* Header text color */
     font-weight: bold;
     font-size: 1.1rem;          /* Slightly larger font for headers */
 }
@@ -172,7 +183,7 @@ table caption {
     align-items: center;
     justify-content: center;       /* Centers items inside the filter */
     max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 4px;
@@ -189,14 +200,14 @@ table caption {
     margin-right: 10px;
     font-weight: bold;
     font-size: 16px;
-    color: #F2E5D2;
+    color: #D15C65;
 }
 
 #city-select {
     font-size: 16px;    /* Increase dropdown font size */
     width: auto;        /* Adjust the width to fit the content */
     margin-right: 10px;
-    color:black;  
+    color: #D15C65;
     align-self: center;
 }
 
@@ -228,17 +239,7 @@ table caption {
     }
 }
 
-.custom-paragraph-1 {
-    display: block;
-    max-width: 90%;        /* Reduce max-width for smaller screens */
-    font-size: 1.5rem;     /* Decrease font size */
-    color: #F2E5D2;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
+
 
 /* Hide the entire column */
 .hide-column {
