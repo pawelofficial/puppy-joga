@@ -11,6 +11,7 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     padding: 20px;
+    align-items: center;
 }
 
 /* Background container */
@@ -83,6 +84,7 @@ body {
     padding: 15px 25px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 /* Center the paragraph text */
@@ -140,15 +142,15 @@ tr td:nth-child(1) {
 
 /* Add to your CSS file */
 .city-filter {
-    display: inline-flex;          /* Changes the display type to inline-flex */
+    display: inline-flex;          /* Keeps it inline-flex */
     align-items: center;
-    justify-content: center;       /* Centers items horizontally */
-    max-width: 500px;              /* Sets a maximum width */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   /* Subtle shadow */
-    padding: 10px;                 /* Space inside the container */
-    border-radius: 4px;            /* Rounded corners */
-    margin: 20px auto;             /* Centers the container horizontally */
+    justify-content: center;       /* Centers items inside the filter */
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 20px auto;
 }
 @media (min-width: 576px) {
     .city-filter {
@@ -207,6 +209,7 @@ tr td:nth-child(1) {
     padding: 15px 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 /* Hide the entire column */
