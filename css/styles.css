@@ -7,11 +7,11 @@
 
 /* Body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column; /* Ensure content stacks vertically */
+    min-height: 100vh;  /* Ensure full viewport height */
 }
 
 /* Background container */
@@ -79,7 +79,7 @@ body {
     margin: 50px auto;
     max-width: 90%;        /* Reduce max-width for smaller screens */
     font-size: 1.5rem;     /* Decrease font size */
-    color: #d4af37;
+    color: #F2E5D2;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 25px;
     border-radius: 10px;
@@ -89,7 +89,7 @@ body {
 
 /* Center the paragraph text */
 .custom-paragraph a {
-    color: #d4af37;
+    color: #F2E5D2;
     text-decoration: none;
     font-weight: bold;
 }
@@ -104,41 +104,67 @@ body {
     width: 100%;
     text-align: center;
     background-color: transparent;
+    padding-bottom: 50px;
 }
 
 .class-schedule h2 {
     font-size: 2rem;
-    color: #d4af37;
+    color: #F2E5D2;
 }
 
 /* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto; /* Center the table */
+    margin: 20px auto; /* Center the table */
+    border: 2px solid #F2E5D2; /* Slightly thicker table border */
+    box-shadow: 0px 0px 50px white;
+    
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #d4af37;
+    padding: 15px; /* Increased padding for a spacious feel */
+    border: 1px solid #D15C65; /* Add border color to match the theme */
     text-align: center;
 }
 
 th {
-    background-color: #d4af37; /* Header background color */
-    color: black;             /* Header text color */
+    background-color: #D15C65;  /* Header background color */
+    color: white;               /* Header text color */
+    font-weight: bold;
+    font-size: 1.1rem;          /* Slightly larger font for headers */
 }
 
 td {
-    background-color: rgba(0, 0, 0, 0.7);  /* Table cell background */
-    color:  #d4af37;                        /* Table cell text color */
+    background-color: black; /* Default cell background color */
+    color: #D15C65;            /* Table cell text color */
 }
 
-/* First column styles */
-tr td:nth-child(1) {
-    background-color: red; /* Change this to your desired color */
+/* Alternating row colors for better readability */
+tr:nth-child(odd) td {
+    background-color: #F7EFE5;  /* Light beige for odd rows */
 }
 
+
+
+tr:nth-child(even) td {
+    background-color: #F2E5D2;  /* Slightly darker beige for even rows */
+}
+
+
+/* Hover effect for rows */
+tr:hover td {
+    font-weight: bold;
+}
+
+
+/* Additional styling for a cleaner look */
+table caption {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #D15C65;
+}
 
 /* Add to your CSS file */
 .city-filter {
@@ -150,7 +176,8 @@ tr td:nth-child(1) {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 4px;
-    margin: 20px auto;
+    margin: 20px auto;  /* Center horizontally */
+    text-align: center; /* Center the content inside */
 }
 @media (min-width: 576px) {
     .city-filter {
@@ -162,7 +189,7 @@ tr td:nth-child(1) {
     margin-right: 10px;
     font-weight: bold;
     font-size: 16px;
-    color: #d4af37;
+    color: #F2E5D2;
 }
 
 #city-select {
@@ -170,6 +197,7 @@ tr td:nth-child(1) {
     width: auto;        /* Adjust the width to fit the content */
     margin-right: 10px;
     color:black;  
+    align-self: center;
 }
 
 @media (max-width: 768px) {
@@ -204,7 +232,7 @@ tr td:nth-child(1) {
     display: block;
     max-width: 90%;        /* Reduce max-width for smaller screens */
     font-size: 1.5rem;     /* Decrease font size */
-    color: #d4af37;
+    color: #F2E5D2;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 15px;
     border-radius: 10px;
